@@ -3,10 +3,7 @@ import type { Post, CreatePostData } from '../types/posts';
 
 const API_BASE = 'https://jsonplaceholder.typicode.com';
 
-/**
- * Fetch all posts from the API
- * This is the function we'll use with useQuery
- */
+
 export async function fetchPosts(): Promise<Post[]> {
   const response = await fetch(`${API_BASE}/posts?_limit=10`);
 
@@ -17,10 +14,6 @@ export async function fetchPosts(): Promise<Post[]> {
   return response.json();
 }
 
-/**
- * Create a new post via POST request
- * This is the function we'll use with useMutation
- */
 export async function createPost(data: CreatePostData): Promise<Post> {
   const response = await fetch(`${API_BASE}/posts`, {
     method: 'POST',

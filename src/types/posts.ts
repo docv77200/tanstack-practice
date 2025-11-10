@@ -12,7 +12,7 @@ export interface Post {
   }
   
   /**
-   * Type for creating a new post (no id yet)
+   * Type for creating a new post 
    */
   export interface CreatePostData {
     userId: number;
